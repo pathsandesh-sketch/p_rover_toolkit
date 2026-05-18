@@ -4,7 +4,7 @@ from flask import Flask, Response, render_template_string, request as flask_requ
 
 app = Flask(__name__)
 
-PI_IP = "10.2.131.XXX" 
+PI_IP = "10.2.140.109" 
 
 HTML_INTERFACE = """
 <!DOCTYPE html>
