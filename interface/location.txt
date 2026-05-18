@@ -1,0 +1,2 @@
+app.py should be on laptop terminal
+pi_motor_server.py should be on pi ssh terminal
