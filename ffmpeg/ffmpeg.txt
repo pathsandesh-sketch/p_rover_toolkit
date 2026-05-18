@@ -1,0 +1,5 @@
+On laptop:
+ffplay -i "tcp://0.0.0.0:8282?listen" -fflags nobuffer -flags low_delay
+
+On pi:
+ffmpeg -f v4l2 -video_size 640x480 -framerate 30 -i /dev/video0 -vcodec libx264 -preset ultrafast -tune zerolatency -b:v 1500k -f mpegts tcp://10.2.131.184:8282
