@@ -1,4 +1,4 @@
-On sender(rpi):
+#On sender(rpi):
   gst-launch-1.0 v4l2src device=/dev/video0 ! video/x-raw,width=1280,height=720,framerate=30/1 ! v4l2h264enc extra-controls="controls,h264_profile=4,h264_level=10,video_bitrate=2000000;" ! h264parse ! rtph264pay config-interval=1 pt=96 ! udpsink host=10.2.131.184 port=5000
-On receiver(laptop):
+#On receiver(laptop):
   gst-launch-1.0 udpsrc port=5000 caps="application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264, payload=(int)96" ! rtpjitterbuffer latency=0 ! rtph264depay ! avdec_h264 ! videoconvert ! glimagesink sync=false
