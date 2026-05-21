@@ -1,0 +1,1 @@
+ffmpeg -f v4l2 -input_format mjpeg -video_size 640x480 -framerate 30 -i /dev/video0 -c:v libx264 -preset ultrafast -tune zerolatency -b:v 1500k -f mpegts -reconnect 1 -reconnect_at_eof 1 -reconnect_streamed 1 -timeout 2000000 tcp://10.2.131.184:8282
