@@ -17,11 +17,11 @@ void loop() {
 
   float voltage = rawValue1 * (5.0 / 1023.0);
 
-  Serial.print("MQ-7 Raw Value: ");
+  Serial.print("CO  Raw Value: "); //MQ-7
   Serial.print(rawValue1);
-  Serial.print("   |   MQ-135 Raw Value: ");
+  Serial.print("   |   H2S Raw Value: ");//MQ-135
   Serial.print(rawValue2);
-  Serial.print("   |   MQ-4 Raw Value: ");
+  Serial.print("   |   CH4 Raw Value: ");//MQ-4
   Serial.print(rawValue3);
 
 
